@@ -31,6 +31,15 @@
     password_req_lower: true
     password_req_upper: true
     password_min_length: 12
+    password_failed_attempts: 3
+    password_failed_time: 600  
+    password_hash_alg: "sha512"  
+    password_expire_days: 90  
+    password_min_days: 7  
+    password_warning_days: 14  
+    password_inactive_lock_days: 30 
+    default_umask: "027"  
+    root_password: "SuperSecureRootPassword"  
     
   tasks: 
 
