@@ -19,10 +19,10 @@
   hosts: localhost
   vars:
     gpgcheck: true
+    not ipv6_disable: true
     selinux: "enforcing"
     selinux_policy: "targeted"
     crypto_policy: "DEFAULT"
-    not ipv6_disable: true
   tasks: 
 
     # Find the minimum UID of the machine for normal acocunts. This varies
