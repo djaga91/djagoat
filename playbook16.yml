@@ -37,7 +37,7 @@
         name: "*"
         state: latest
         security: true
-      when: update_system
+      when: update_system | default(false)
       tags:
         - 1.9.0
 
