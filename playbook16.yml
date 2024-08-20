@@ -1002,7 +1002,7 @@
             state: present
             sysctl_set: true
           loop: "{{ lookup('ansible.builtin.dict' , unneeded_ipv6_network) }}"
-          notify: Flush network routes
+          
 
     - name: 3.1 - Disable uncommon network protocols
       tags:
