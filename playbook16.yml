@@ -18,7 +18,7 @@
   gather_facts: false
   hosts: localhost
   vars:
-    gpgcheck: true
+    gpgcheck: false
     ipv6_disable: false
     selinux: "enforcing"
     selinux_policy: "targeted"
