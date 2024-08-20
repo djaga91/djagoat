@@ -27,6 +27,10 @@
     cron_allow: []
     at_allow: []
     sudo_log: /var/log/sudo.log
+    password_req_digit: true
+    password_req_lower: true
+    password_req_upper: true
+    password_min_length: 12
     
   tasks: 
 
