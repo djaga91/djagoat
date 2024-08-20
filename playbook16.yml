@@ -29,6 +29,8 @@
     # Find the minimum UID of the machine for normal acocunts. This varies
     #  between machines and environments, so we pull it from the file it
     #  is supposed to exist in.
+    
+
     - name: Determine the Minimum UID for new, non-system, accounts
       ansible.builtin.command: "/usr/bin/awk '/^s*UID_MIN/{print $2}' /etc/login.defs"
       register: min_uid
@@ -43,6 +45,8 @@
     - name: Display mounts
       debug:
         var: ansible_mounts
+    - name: Gather package facts
+      ansible.builtin.package_facts:
    
 
 
@@ -1544,7 +1548,7 @@
     # This control is early in order to create the files. This will
     # make sure they are available when cron starts
     - name: 5.1.0 - Configure cron/at
-      when: "'cronie' in ansible_facts.packages"
+      when: ansible_facts.packages is defined and 'cronie' in ansible_facts.packages
       tags:
         - 5.1.0
       block:
