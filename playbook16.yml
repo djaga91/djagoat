@@ -567,6 +567,13 @@
       register: usercfgdir
       tags:
          1.4.1
+    - name: 1.4.1 - Check if grub.cfg exists
+      ansible.builtin.stat:
+        path: /boot/grub2/grub.cfg
+      register: grubdir
+      tags:
+        - 1.4.1
+
 
     # Control 1.4.1, Grub bootloader password - skipped
 
