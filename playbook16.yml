@@ -1406,7 +1406,7 @@
       with_fileglob:
         - "/etc/audit/auditd.conf"
         - '/etc/audit/rules.d/*'
-        - "{{ log_file }}"
+        
       tags:
         - 4.1.4.1
         - 4.1.4.2
