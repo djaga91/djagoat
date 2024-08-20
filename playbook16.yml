@@ -24,6 +24,9 @@
     selinux_policy: "targeted"
     crypto_policy: "DEFAULT"
     log_service: "rsyslog"
+    cron_allow: []
+    at_allow: []
+    
   tasks: 
 
     # Find the minimum UID of the machine for normal acocunts. This varies
