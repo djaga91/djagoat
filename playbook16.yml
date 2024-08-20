@@ -19,7 +19,7 @@
   hosts: localhost
   vars:
     gpgcheck: true
-    not ipv6_disable: true
+    ipv6_disable: false
     selinux: "enforcing"
     selinux_policy: "targeted"
     crypto_policy: "DEFAULT"
