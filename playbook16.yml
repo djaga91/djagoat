@@ -1484,7 +1484,6 @@
             group: root
             mode: 0644
             state: present
-          notify: Restart rsyslog
           tags:
             - 4.2.1.4
 
