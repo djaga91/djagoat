@@ -26,6 +26,7 @@
     log_service: "rsyslog"
     cron_allow: []
     at_allow: []
+    sudo_log: /var/log/sudo.log
     
   tasks: 
 
