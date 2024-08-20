@@ -17,6 +17,8 @@
 - name:  playbook test
   gather_facts: false
   hosts: localhost
+  vars:
+    gpgcheck: true
   tasks: 
 
     # Find the minimum UID of the machine for normal acocunts. This varies
@@ -36,8 +38,7 @@
     - name: Display mounts
       debug:
         var: ansible_mounts
-    vars:
-    gpgcheck: true
+   
 
 
 
