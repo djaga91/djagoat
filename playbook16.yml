@@ -758,10 +758,6 @@
           ansible.builtin.command: /usr/bin/fips-mode-setup --enable
           when: ( crypto_policy is defined and crypto_policy == "FIPS") and fips_mode.rc == "2"
     
-    - name: Restart aidecheck
-      ansible.builtin.systemd:
-        name: aidecheck.timer
-        state: restarted
 
 
     # 2 Services
