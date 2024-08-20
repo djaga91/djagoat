@@ -914,7 +914,7 @@
         - 2.2.16
 
     - name: 2.3.1 - Remove telnet; add to removal list
-      ansible.builtin.set_fa
+      ansible.builtin.set_fact:
         unneeded_packages: "{{ unneeded_packages + [ 'telnet' ] }}"
       tags:
         - 2.3.1
@@ -926,17 +926,16 @@
         - 2.3.3
 
     - name: Remove Host-Based Authentication Files
-          ansible.builtin.set_fact:
-            unneeded_packages: "{{ unneeded_packages + [ 'host_files' ] }}"
-          tags:
-            - 2.2.13
+      ansible.builtin.set_fact:
+        unneeded_packages: "{{ unneeded_packages + [ 'host_files' ] }}"
+      tags:
+        - 2.2.13
 
-    -name : Remove User Host-Based Authentication Files
+    - name : Remove User Host-Based Authentication Files
       ansible.builtin.set_fact:
         unneeded_packages: "{{ unneeded_packages + [ 'users_files' ] }}"
       tags: 
         -2.2.13
-
 
     - name: 2.3 - list of packages to remove
       ansible.builtin.debug:
