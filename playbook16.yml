@@ -36,6 +36,9 @@
     - name: Display mounts
       debug:
         var: ansible_mounts
+    vars:
+    gpgcheck: true
+
 
 
     # Update the system with security packages using the system's package manager
